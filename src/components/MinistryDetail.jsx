@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { withBase } from '../utils/asset'
 
 const eventBlocksByMinistry = {
   ninos: [
@@ -242,7 +243,7 @@ function MinistryDetail({ ministry }) {
                       >
                         {loopImages.map((imageSrc, index) => (
                           <div key={`${block.id}-${imageSrc}-${index}`} className="ministry-carousel__slide">
-                            <img src={imageSrc} alt={`${block.title} ${index + 1}`} />
+                            <img src={withBase(imageSrc)} alt={`${block.title} ${index + 1}`} />
                           </div>
                         ))}
                       </div>

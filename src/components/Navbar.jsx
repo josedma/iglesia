@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ministries, navLinks } from '../data/content'
+import { withBase } from '../utils/asset'
 
 function Navbar({ forceSolid = false }) {
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -56,7 +57,7 @@ function Navbar({ forceSolid = false }) {
     >
       <div className="container navbar__content">
         <a href="#inicio" className="brand" aria-label="Ir al inicio de ICCED">
-          <img src="/logo.webp" alt="Logo ICCED" className="brand__logo" />
+          <img src={withBase('/logo.webp')} alt="Logo ICCED" className="brand__logo" />
         </a>
 
         <button

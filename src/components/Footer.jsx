@@ -1,4 +1,5 @@
 import { navLinks } from '../data/content'
+import { withBase } from '../utils/asset'
 
 const socialLinks = [
   { label: 'Facebook', href: '#', icon: '/social/facebook.svg' },
@@ -45,7 +46,7 @@ function Footer() {
 
           <section className="footer__col footer__brand-col">
             <div className="footer-logo-frame">
-              <img src="/logo.webp" alt="Logo ICCED" className="footer-logo" />
+              <img src={withBase('/logo.webp')} alt="Logo ICCED" className="footer-logo" />
             </div>
             <div className="footer-socials">
               {socialLinks.map((item) => (
@@ -57,7 +58,7 @@ function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <img src={item.icon} alt={item.label} className="footer-social__icon" />
+                  <img src={withBase(item.icon)} alt={item.label} className="footer-social__icon" />
                 </a>
               ))}
             </div>

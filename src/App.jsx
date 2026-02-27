@@ -8,8 +8,9 @@ import MinistryDetail from './components/MinistryDetail'
 import Cta from './components/Cta'
 import Footer from './components/Footer'
 import { ministries } from './data/content'
+import { withBase } from './utils/asset'
 
-const heroSlides = ['/1.webp', '/2.webp', '/3.webp']
+const heroSlides = ['/1.webp', '/2.webp', '/3.webp'].map(withBase)
 
 function getRouteFromHash() {
   const hash = window.location.hash || '#inicio'
