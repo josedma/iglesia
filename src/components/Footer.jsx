@@ -2,8 +2,8 @@ import { navLinks } from '../data/content'
 import { withBase } from '../utils/asset'
 
 const socialLinks = [
-  { label: 'Facebook', href: '#', icon: '/social/facebook.svg' },
-  { label: 'Instagram', href: '#', icon: '/social/instagram.svg' }
+  { label: 'Facebook', href: 'https://www.facebook.com/iccedmundolopez', icon: '/social/facebook.svg' },
+  { label: 'Instagram', href: 'https://www.instagram.com/juventudic4/', icon: '/social/instagram.svg' }
 ]
 
 function Footer() {
